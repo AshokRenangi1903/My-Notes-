@@ -15,6 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // TODO: implement initState
+    super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.pushAndRemoveUntil(
           context, MaterialPageRoute(builder: (_) => Home()), (route) => false);
@@ -27,6 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Image.asset(
           "lib/resources/notes splash screen.png",
+          fit: BoxFit.cover,
           height: Get.height * 0.8,
         ),
       ),
